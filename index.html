@@ -1,23 +1,23 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
-	<TITLE></TITLE>
-	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.5.3 (Windows)">
-	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20140902;135250727000000">
-	<STYLE TYPE="text/css">
-	<!--
-		@page { margin: 0.79in }
-		P { margin-bottom: 0.1in; line-height: 120% }
-		PRE.cjk { font-family: "NSimSun", monospace }
-	-->
-	</STYLE>
-</HEAD>
-<BODY LANG="en-US" DIR="LTR">
-<PRE CLASS="western" STYLE="margin-bottom: 0.2in; text-align: center"><FONT SIZE=6 STYLE="font-size: 28pt"><FONT FACE="Cave Story">Are you prepared to survive </FONT><FONT FACE="Cave Story">in the modern digital era</FONT><FONT FACE="Cave Story">?</FONT></FONT>
+---
+layout: default
+---
 
-<FONT FACE="Cave Story"><FONT SIZE=6 STYLE="font-size: 28pt">Digital Survival</FONT></FONT><FONT FACE="Cave Story"><FONT SIZE=6> is a work in progress...</FONT></FONT>
-<FONT FACE="Cave Story"><FONT SIZE=6>More information coming soon.</FONT></FONT></PRE>
-</BODY>
-</HTML>
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

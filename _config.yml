@@ -1,0 +1,13 @@
+# Site settings
+title: The digital wisdom of the 21st Century.
+email: 
+description: > # this means to ignore newlines until "baseurl:"
+  Digital Survival is a project designed to help you employ wisdom in the modern digital age by 
+  1) promoting open source software 2) helping users become more independant 3) loving God and people.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.DigitalSurvival.us/" # the base hostname & protocol for your site
+twitter_username: 
+github_username:  DigitalSurvival
+
+# Build settings
+markdown: kramdown
