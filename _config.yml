@@ -1,13 +1,55 @@
 # Site settings
 title: The digital wisdom of the 21st Century.
 email: 
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Digital Survival is a project designed to help you employ wisdom in the modern digital age by 
-  1) promoting open source software 2) helping users become more independant 3) loving God and people.
-baseurl: "" # the subpath of your site, e.g. /blog/
+  1) promoting open source software 2) helping users become more independent 3) loving God and people.
+
 url: "http://www.DigitalSurvival.us/" # the base hostname & protocol for your site
 twitter_username: 
-github_username:  DigitalSurvival
+github_username: DigitalSurvival
+
+# 
+timezone: America/Los_Angeles
+
+# Where things are
+source:      .
+#destination: ./_site
+#plugins:     ./_plugins
+#layouts:     ./_layouts
+#data_source: ./_data
+#collections: null
+
+# Handling Reading
+#safe:         false
+#include:      [".htaccess"]
+#exclude:      []
+#keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+#textile_ext:  "textile"
 
 # Build settings
+
+# Conversion
 markdown: kramdown
+#highlighter: pygments
+
+# Serving
+#detach:  false
+#port:    4000
+#host:    0.0.0.0
+#baseurl: "" # does not include hostname
+
+# Backwards-compatibility
+#relative_permalinks: false
+
+# Plugins
+#whitelist: []
+#gems:      []
+
+# Filtering Content
+#show_drafts: null
+#limit_posts: 0
+#future:      true
+#unpublished: false

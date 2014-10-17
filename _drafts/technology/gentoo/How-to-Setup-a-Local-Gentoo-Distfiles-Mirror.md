@@ -1,12 +1,13 @@
 ---
 layout: post
 title: How to Setup a Local Gentoo Distfiles Mirror
-description: This article shows the advantages in independence gained when having files locally instead of relying on the internet for source files.
+description: This entry shows the advantages in independence gained when having files locally instead of relying on the internet for source files.
 date: 2014-10-06 17:01:24 -07:00
 tags: "Local Gentoo Distfiles Mirror"
 ---
+###Why Setup a Local Mirror?###
 
-Why would you want to setup a local, private Distfiles mirror? There's several reasons why this would be a good idea. First, if your access to the internet goes down, you are enabled to still download and install packages from source. Will they be the absolute newest packages? No. They will be only as up to date as your repository was.
+Why would you want to setup a local, private distfiles mirror? There's several reasons why this would be a good idea. First, if your access to the internet goes down, you are enabled to still download and install packages from source. Will they be the absolute newest packages? No. They will be only as up to date as your repository was.
 
 If you're doing this for a company doing tests, as I did, you will save the main mirror lots and lots of bandwidth.
 
@@ -16,15 +17,16 @@ Before we download the files, lets create a new directory for these files:
 
 <code>mkdir -p /mirror/distfiles</code>
 
-You can really put the distfiles anywhere you want, however it's important to note you'll be downloading a LOT of files. How much? Around 200 GBs. Plan on letting your system download files for several days, depending on the speed of your internet connection.
+You can really put the distfiles anywhere you want, however it's important to note you'll be downloading a LOT of files. How much? Around 200 GBs. Plan on letting your system download files for several days (this all depends on the speed of your internet connection; if you have a uber fast connection, it might only take a few hours).
 
-You can download the files from a mirror using something like this command:
+You can download the files from a mirror using this, or a similar command:
 
 <code>rsync --recursive --links --safe-links --perms --times --omit-dir-times --compress --stats --human-readable --progress --timeout=180 rsync://rsync.name.of.mirror/gentoo/distfiles/ /mirror/distfiles</code>
 
-<pre>
-Each time you've successfully connected to an official rsync mirror you should see a message similar to this one:
 
+Each time you've successfully connected to an official rsync mirror you should see a message similar to this one:.
+
+<pre>
 GEORGIA TECH SOFTWARE LIBRARY
 
 Unauthorized use is prohibited.  Your access is being logged.
@@ -44,11 +46,11 @@ If you run a mirror that is not accessible to the public, please mirror
 from the modules listed at rsync://rsync.gtlib.gatech.edu.
 </pre>
 
-Be sure to read the message in its entirety. Sometimes the maintainers of the official mirror will ask the users to connect to a different address if they will be syncing for the purposes of a private, local mirror. You want to be sure your local mirror is being nice with how much it talks to the official mirror.
+Be sure to read the rsync MOTD (message of the day) in its *entirety*. Sometimes the maintainers of official mirrors will ask the user to connect to a different address if they will be syncing for the purposes of a private, local mirror. You want to be sure your local mirror is being nice with how much it talks to the official mirrors. Your mirror will be downloading a lot more data than normal uses will, especially to get the initial sync.
 
-Right now there is about 68,419 files being hosted on any Distfiles mirror. All of these are varying sizes. The largest file (FlightGear-data) is around 1.1 GBs. The smallest (v4l-dvb-saa716x) being 10 bytes.
+Right now there are about 68,419 files being hosted on any distfile mirror. All of these files are varying sizes. The largest file ("FlightGear-data") is around 1.1 GBs. The smallest ("v4l-dvb-saa716x") being 10 bytes.
 
-## Using Rsync to Expose the Distfiles ##
+### Using Rsync to Expose the Distfiles ###
 
 Once you have all the files downloaded, it is a simple matter of "exposing" them to other machines using the rsync daemon in order to have a local distfiles mirror. Since Gentoo replies upon the rsync command for Portage, it should be already installed on your system. In the uber rare instance that it is not installed it can be installed using the <code>emerge</code> command:
 
@@ -88,9 +90,11 @@ You can setup a "message of the day" for anyone who connects to your mirror to s
 You are downloading files from your local Gentoo Distfiles mirror!
 </pre>
 
-## Configuring Local Machines to use the Local Distfiles Mirror ##
+### Configuring Local Machines to use the Local Distfiles Mirror ###
 
-After you setup the rsync service, the final step is to tell your machines to use the local mirror instead of downloading the Distfiles from the internet. For each machine you will need to modify the <code>GENTOO_MIRRORS</code> variable in <pre>/etc/portage/make.conf</pre>. Replace the "IP_Address_Of_Mirror" section with the actual IP address of the machine containing the Distfiles. Do this for each machine that is supposed to connect to the local mirror.
+After you setup the rsync service, the final step is to tell your machines to use the local mirror instead of downloading the Distfiles from the internet. For each machine you will need to modify the <code>GENTOO_MIRRORS</code> variable in <pre>/etc/portage/make.conf</pre>
+
+Replace the "IP_Address_Of_Mirror" section with the actual IPv4 address of the machine containing your distfiles. Do this for each machine that is supposed to connect to the local mirror. As long as your on an internal network, be it a 10.x.x.x network or a 192.168.x.x, you should be able to connect to the mirror.
 
 <pre>
 GENTOO_MIRRORS="rsync://IP_Address_Of_Mirror/distfiles"
@@ -98,7 +102,8 @@ GENTOO_MIRRORS="rsync://IP_Address_Of_Mirror/distfiles"
 
 That's it! You're done! You've become more independent by having source code for thousands of packages saved locally. You can now upgrade, reconfigure, install, uninstall software without an internet connection. Granted, your mirror should be on a schedule to sync with an upstream public mirror in order to have the most up to date files. Maybe that's the content of another upcoming how-to entry... As long as you configure things properly you should very little maintenance to do.
 
-Soon I will add this guide to the Gentoo wiki so that the community will be able to find it in wiki formatting. It might help with some of the clarity.
+Soon I will add this guide to the Gentoo wiki so that the community will be able to find it in wiki formatting right where users should be able to find it - on the official wiki!
 
 Maffblaster
+
 Digital Survival
