@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Blog Posts:</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+=======
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -47,6 +71,7 @@
 <li><a href="/blog/" class="scroll-link">Blog</a></li>
 <li class="navigation-github"><a href="http://github.com/pagekite/Mailpile" target="_blank" class="scroll-link">Github</a></li>
 </ul>
+>>>>>>> a3be11161d2d3524fd8e85774a650588825d713b
 </div>
 <a id="github-banner" href="https://github.com/pagekite/mailpile"><img style="position: absolute; top: 2.9em; right: 0; border: 0; z-index:4;" src="/img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
 <div id="content" class="container">
