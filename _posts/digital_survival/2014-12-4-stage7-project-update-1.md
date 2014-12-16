@@ -11,4 +11,5 @@ This week I've been able to make some decent progress on the Stage7 installer. A
 I hope to push a few commits this weekend, and then focus more intensely on actually extending functionality to include Grub 2 and GPT support. God willing I'll be able to get those kinds of issues worked out rather quickly.
 
 Onward and upward!
+
 Maffblaster
