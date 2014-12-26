@@ -14,8 +14,8 @@ Bruce Schneier's website: [https://www.schneier.com/](https://www.schneier.com/)
 
 SystemRescueCD website: [http://www.sysresccd.org/](http://www.sysresccd.org/)
 
-I need more people who are interested in helping! If you're supportive of the philosophy behind Digital Survival, I want to heard from you! 
+I need more people who are interested in helping! If you're supportive of the philosophy behind Digital Survival, I want to hear from you! 
 
 You can e-mail me at [my_username]@gmail.com
 
-Maffblaster's personal blog: http://maffblaster.github.io
+Maffblaster's personal website: [http://maffblaster.github.io](http://maffblaster.github.io)
