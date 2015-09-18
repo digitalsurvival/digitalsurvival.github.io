@@ -1,15 +1,14 @@
 # Site settings
-title: The digital wisdom of the 21st Century.
+title: Get out from under the corperate cloud.
 email: 
 description: >
   Digital Survival is a project designed to help you employ wisdom in the modern digital age by 
   1) promoting open source software 2) helping users become more independent 3) loving God and people.
 
-url: "http://www.DigitalSurvival.us/" # the base hostname & protocol for your site
+url: "http://www.digitalsurvival.us/" # the base hostname & protocol for your site
 twitter_username: 
 github_username: DigitalSurvival
 
-# 
 timezone: America/Los_Angeles
 
 # Where things are
