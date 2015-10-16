@@ -1,0 +1,6 @@
+## Site ##
+digitalsurvival.io: 0.0.1
+
+## Frameworks ##
+Bootstrap: v3.3.5
+Clipboard.js: v1.4.2

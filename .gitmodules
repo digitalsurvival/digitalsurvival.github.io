@@ -1,0 +1,6 @@
+[submodule "js/clipboard.js"]
+	path = js/clipboard.js
+	url = https://github.com/zenorocha/clipboard.js
+[submodule "css/bootstrap"]
+	path = css/bootstrap
+	url = https://github.com/twbs/bootstrap.git
