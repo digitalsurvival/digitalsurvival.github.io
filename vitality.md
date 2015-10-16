@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vitality
+title: vitality
 permalink: /vitality/
 ---
 

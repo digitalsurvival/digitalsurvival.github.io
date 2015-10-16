@@ -1,13 +1,12 @@
 # Site settings
-title: Get out from under the corperate cloud.
+title: digital survival
 email: 
 description: >
-  Digital Survival is a project designed to help you employ wisdom in the modern digital age by 
-  1) promoting open source software 2) helping users become more independent 3) loving God and people.
+  digital survival is a project designed to help you employ wisdom in the modern digital age.
 
 url: "http://www.digitalsurvival.us/" # the base hostname & protocol for your site
 twitter_username: 
-github_username: DigitalSurvival
+github_username: digitalsurvival
 
 timezone: America/Los_Angeles
 
@@ -49,6 +48,6 @@ markdown: kramdown
 
 # Filtering Content
 #show_drafts: null
-#limit_posts: 0
+limit_posts: 5
 #future:      true
 #unpublished: false
