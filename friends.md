@@ -15,3 +15,5 @@ There are a few like-minded organizations that exist on the web. These include:
 [SurvivalBlog](https://survivalblog.com/) - Started by James Wesley, Rawles, a former US Intelligence officer, SurvivalBlog provides 
 
 [The Art of Manliness](http://www.artofmanliness.com/) — The blog's own words descript it best: a "blog dedicated to uncovering the lost art of being a man." I enjoy reading articles listed here from time to time.
+
+The [FreedomBox Foundation](http://freedomboxfoundation.org/) is an organization dedicated to the preservation of digital freedoms. Primary the right to privacy and security. Check out their [GitHub profile](https://github.com/freedombox) to see a list of software they have produced.
