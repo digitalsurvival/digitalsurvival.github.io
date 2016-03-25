@@ -8,7 +8,7 @@ As the name implies, Digital Survival is an organization that believes people sh
 
 ## Why Digital Survival? ##
 
-Although [independence](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence#Annotated_text_of_the_engrossed_Declaration) may be primarily a deeply held American value,  
+[Independence](https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence#Annotated_text_of_the_engrossed_Declaration) is a deeply held American value. Being less dependant on external services has many advanatages especially if data privacy, security, or control is desired.
 
 ### What does this practically mean? ###
 
